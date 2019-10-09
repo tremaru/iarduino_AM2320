@@ -13,7 +13,7 @@
 
 | Модель | Ссылка на магазин |
 |---|---|
-| <p>Цифровой датчик температуры и влажности</p> <img src="https://wiki.iarduino.ru/img/resources/703/703.svg" width="150px"></img>| https://iarduino.ru/shop/Sensory-Datchiki/cifrovoy-datchik-temperatury-i-vlazhnosti-i2c-trema-modul.html |
+| <p>Цифровой датчик температуры и влажности</p> <img src="https://wiki.iarduino.ru/img/resources/703/703.svg" width="100px"></img>| https://iarduino.ru/shop/Sensory-Datchiki/cifrovoy-datchik-temperatury-i-vlazhnosti-i2c-trema-modul.html |
 
 
 ## Назначение функций:
