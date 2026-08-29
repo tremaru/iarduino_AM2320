@@ -1,5 +1,5 @@
 //	Библиотека для работы с датчиком температуры и влажности AM2320: http://iarduino.ru/shop/Sensory-Datchiki/cifrovoy-datchik-temperatury-i-vlazhnosti-am2320.html
-//  Версия: 1.1.5
+//  Версия: 1.1.6
 //  Последнюю версию библиотеки Вы можете скачать по ссылке: http://iarduino.ru/file/265.html
 //  Подробное описание функции бибилиотеки доступно по ссылке: http://wiki.iarduino.ru/page/cifrovoy-datchik-temperatury-i-vlazhnosti-i2c-trema-modul/
 //  Библиотека является собственностью интернет магазина iarduino.ru и может свободно использоваться и распространяться!
@@ -19,7 +19,7 @@
 																							//
 #include "iarduino_AM2320_I2C.h"															//	Подключаем библиотеку выбора реализации шины I2C.
 																							//
-#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega2560__) || defined(ESP8266) || defined(ESP32) || defined(ARDUINO_ARCH_RP2040) || defined(RENESAS_CORTEX_M4) // Если подключена библиотека Wire или платы её поддерживают...
+#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega2560__) || defined(ESP8266) || defined(ESP32) || defined(ARDUINO_ARCH_RP2040) || defined(RENESAS_CORTEX_M4) // Если подключена библиотека Wire.h или платы её поддерживают...
 #include <Wire.h>																			//	Разрешаем использовать библиотеку Wire в данной библиотеке.
 #endif																						//
 #if defined( iarduino_I2C_Software_h )														//	Если библиотека iarduino_I2C_Software подключена в скетче...
@@ -40,7 +40,7 @@ class iarduino_AM2320{																		//
 	/**	Конструктор класса **/																//
 		iarduino_AM2320(){	selI2C = new iarduino_I2C_Select; }								//	Конструктор основного класса
 	/**	функции доступные пользователю **/													//
-		#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega2560__) || defined(ESP8266) || defined(ESP32) || defined(ARDUINO_ARCH_RP2040) || defined(RENESAS_CORTEX_M4) // Если подключена библиотека Wire или платы её поддерживают...
+		#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega2560__) || defined(ESP8266) || defined(ESP32) || defined(ARDUINO_ARCH_RP2040) || defined(RENESAS_CORTEX_M4) // Если подключена библиотека Wire.h или платы её поддерживают...
 		void				begin(TwoWire* i=&Wire ){ selI2C->init(i); selI2C->begin(); }	//	Определяем функцию инициализации модуля								(Параметр:  объект для работы с аппаратной шиной I2C).
 		#endif																				//
 		#if defined(iarduino_I2C_Software_h)												//
